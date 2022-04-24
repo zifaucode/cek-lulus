@@ -1,0 +1,53 @@
+.form-group.issue .help-block, .form-group.issue .help-inline {
+  color: #ffc107; }
+
+.form-group.issue input, .form-group.issue select, .form-group.issue textarea {
+  color: #ffc107;
+  border-color: #ffc107; }
+
+.form-group.issue input:focus, .form-group.issue select:focus, .form-group.issue textarea:focus {
+  border-color: #CE2605;
+  -webkit-box-shadow: 0 0 6px #FCA08E;
+  box-shadow: 0 0 6px #FCA08E; }
+
+.form-group.issue .input-prepend .add-on, .form-group.issue .input-append .add-on {
+  color: #ffc107;
+  background-color: #FED2C9;
+  border-color: #ffc107; }
+
+.form-group.error .help-block, .form-group.error .help-inline {
+  color: #dc3545; }
+
+.form-group.error input, .form-group.error select, .form-group.error textarea {
+  color: #dc3545;
+  border-color: #dc3545; }
+
+.form-group.error input:focus, .form-group.error select:focus, .form-group.error textarea:focus {
+  border-color: #B41323;
+  -webkit-box-shadow: 0 0 6px #F38C96;
+  box-shadow: 0 0 6px #F38C96; }
+
+.form-group.error .input-prepend .add-on, .form-group.error .input-append .add-on {
+  color: #dc3545;
+  background-color: #FACACF;
+  border-color: #dc3545; }
+
+.form-group.validate .help-block, .form-group.validate .help-inline {
+  color: #28a745; }
+
+.form-group.validate input, .form-group.validate select, .form-group.validate textarea {
+  color: #28a745;
+  border-color: #28a745; }
+
+.form-group.validate input:focus, .form-group.validate select:focus, .form-group.validate textarea:focus {
+  border-color: #34C5A1;
+  -webkit-box-shadow: 0 0 6px #78DCC3;
+  box-shadow: 0 0 6px #78DCC3; }
+
+.form-group.validate .input-prepend .add-on, .form-group.validate .input-append .add-on {
+  color: #28a745;
+  background-color: #DDF6F0;
+  border-color: #28a745; }
+
+.form-group .help-block ul {
+  padding-right: 1.5rem; }

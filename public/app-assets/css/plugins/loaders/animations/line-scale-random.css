@@ -1,0 +1,35 @@
+@keyframes line-scale-party {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(0.5); }
+  100% {
+    transform: scale(1); } }
+
+.line-scale-party > div:nth-child(1) {
+  animation-delay: 0.65s;
+  animation-duration: 0.49s; }
+
+.line-scale-party > div:nth-child(2) {
+  animation-delay: -0.13s;
+  animation-duration: 1.12s; }
+
+.line-scale-party > div:nth-child(3) {
+  animation-delay: 0.6s;
+  animation-duration: 0.35s; }
+
+.line-scale-party > div:nth-child(4) {
+  animation-delay: 0.1s;
+  animation-duration: 0.52s; }
+
+.line-scale-party > div {
+  background-color: #404E67;
+  width: 4px;
+  height: 3.45rem;
+  border-radius: 2px;
+  margin: 2px;
+  animation-fill-mode: both;
+  display: inline-block;
+  animation-name: line-scale-party;
+  animation-iteration-count: infinite;
+  animation-delay: 0; }
