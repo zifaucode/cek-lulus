@@ -10,6 +10,8 @@ Web cek kelulusan dibuat dengan laravel, vuejs 2 cdn, Axios, dengan template STA
 - Terdapat Fitur upload siswa Excel dengan format template yang sudah disediakan tanpa ribet harus input 1 per 1 siswa
 - Terdapat juga Fitur Edit web seperti setting slide gambar , logo, nama web, title web
 
+
+
 ## CARA INSTALL
 
 Untuk Menginstall Secara Lokal Pastikan PHP anda diatas > 7.3
@@ -21,13 +23,18 @@ Untuk Menginstall Secara Lokal Pastikan PHP anda diatas > 7.3
 opsi selain migrate database :
 - File SQL terletak pada foldel DBNYA-INI , import ke dalam mysql anda
 
+
+
 ## DEMO WEBSITE
 
 SEGERA.
 
+
+
 ## TRAKTIR KOPI
 
 Traktir saya kopi agar melek terus saat ngoding :      <a href="https://trakteer.id/zifau"><img src="https://img.shields.io/static/v1?label=Trakteer&message=zifaucode&color=C02433"></a>
+
 
 
 ## License
