@@ -28,7 +28,7 @@ Untuk Menginstall Secara Lokal Pastikan PHP anda diatas > 7.3
 
 ## TRAKTIR KOPI
 
-Traktir saya kopi agar melek terus saat ngoding [Traktir](https://trakteer.id/zifau).
+Traktir saya kopi agar melek terus saat ngoding &nbsp: <a href="https://trakteer.id/zifau"><img src="https://img.shields.io/static/v1?label=Trakteer&message=zifaucode&color=C02433"></a>
 
 
 ## License
