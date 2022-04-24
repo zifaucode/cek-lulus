@@ -1,7 +1,7 @@
 <p align="center"><a href="https://github.com/zifaucode/cek-lulus" target="_blank"><img src="https://user-images.githubusercontent.com/33486013/164989084-586c08af-43ea-4f59-93dd-54f25f22c830.png" width="900"></a></p>
 
 <p align="center">
-HAPPY CODING
+SEMOGA BERMANFAAT
 </p>
 
 ## About Laravel
@@ -21,8 +21,8 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 ## CARA INSTALL
 
 Untuk Menginstall Secara Lokal Pastikan PHP anda diatas > 7.3
-- Clone Repository ini Diterminal kesayangan anda 'git clone https://github.com/zifaucode/cek-lulus.git'
-- Ketikan Perintah 'composer install'
+- Clone Repository ini Diterminal kesayangan anda `git clone https://github.com/zifaucode/cek-lulus.git`
+- Ketikan `composer install`
 - Rename .env-lokal menjadi .env dan edit sesuai konfigurasi database anda
 - File SQL terletak pada foldel DBNYA-INI , import ke dalam mysql
 
