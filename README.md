@@ -17,6 +17,7 @@ Untuk Menginstall Secara Lokal Pastikan PHP anda diatas > 7.3
 - Ketikan `composer install`
 - Rename .env-lokal menjadi .env dan edit sesuai konfigurasi database anda
 - migrate databasenya : `php artisan migrate`
+
 opsi selain migrate database :
 - File SQL terletak pada foldel DBNYA-INI , import ke dalam mysql anda
 
