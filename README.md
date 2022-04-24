@@ -1,7 +1,7 @@
 <p align="center"><a href="https://github.com/zifaucode/cek-lulus" target="_blank"><img src="https://user-images.githubusercontent.com/33486013/164989084-586c08af-43ea-4f59-93dd-54f25f22c830.png" width="900"></a></p>
 
 <p align="center">
-SEMOGA BERMANFAAT
+SEMOGA BERMANFAAT <a href="https://trakteer.id/zifau"><img src="https://img.shields.io/static/v1?label=Trakteer&message=zifaucode&color=C02433"></a>
 </p>
 
 ## About Laravel
@@ -28,7 +28,7 @@ Untuk Menginstall Secara Lokal Pastikan PHP anda diatas > 7.3
 
 ## TRAKTIR KOPI
 
-Traktir saya kopi agar melek terus saat ngoding &nbsp: <a href="https://trakteer.id/zifau"><img src="https://img.shields.io/static/v1?label=Trakteer&message=zifaucode&color=C02433"></a>
+Traktir saya kopi agar melek terus saat ngoding : <a href="https://trakteer.id/zifau"><img src="https://img.shields.io/static/v1?label=Trakteer&message=zifaucode&color=C02433"></a>
 
 
 ## License
