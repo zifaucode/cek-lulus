@@ -7,35 +7,34 @@
 ## Tentang CEK-LULUS
 
 Web cek kelulusan dibuat dengan laravel, vuejs 2 cdn, Axios, dengan template STACK ADMIN 3.
-- Terdapat Fitur upload siswa Excel dengan format template yang sudah disediakan tanpa ribet harus input 1 per 1 siswa
-- Terdapat juga Fitur Edit web seperti setting slide gambar , logo, nama web, title web
 
-
+-   Terdapat Fitur upload siswa Excel dengan format template yang sudah disediakan tanpa ribet harus input 1 per 1 siswa
+-   Terdapat juga Fitur Edit web seperti setting slide gambar , logo, nama web, title web
 
 ## CARA INSTALL
 
 Untuk Menginstall Secara Lokal Pastikan PHP anda diatas > 7.3
-- Clone Repository ini Diterminal kesayangan anda `git clone https://github.com/zifaucode/cek-lulus.git`
-- Ketikan `composer install`
-- Rename .env-lokal menjadi .env dan edit sesuai konfigurasi database anda
-- migrate databasenya : `php artisan migrate`
+
+-   Clone Repository ini Diterminal kesayangan anda `git clone https://github.com/zifaucode/cek-lulus.git`
+-   Ketikan `composer install`
+-   Rename .env-lokal menjadi .env dan edit sesuai konfigurasi database anda
+-   migrate databasenya : `php artisan migrate`
 
 opsi selain migrate database :
-- File SQL terletak pada foldel DBNYA-INI , import ke dalam mysql anda
 
+-   File SQL terletak pada foldel DBNYA-INI , import ke dalam mysql anda
 
+Dan Jalankan
+
+-   Dan Jalankan : `php artisan optimize` DAN `php artisan serve`
 
 ## DEMO WEBSITE
 
 SEGERA.
 
-
-
 ## TRAKTIR KOPI
 
-Traktir saya kopi agar melek terus saat ngoding :      <a href="https://trakteer.id/zifau"><img src="https://img.shields.io/static/v1?label=Trakteer&message=zifaucode&color=C02433"></a>
-
-
+Traktir saya kopi agar melek terus saat ngoding : <a href="https://trakteer.id/zifau"><img src="https://img.shields.io/static/v1?label=Trakteer&message=zifaucode&color=C02433"></a>
 
 ## License
 
