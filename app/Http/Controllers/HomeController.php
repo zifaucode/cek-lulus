@@ -6,6 +6,7 @@ use App\Models\Student;
 use Illuminate\Http\Request;
 use App\Models\Web;
 use App\Models\Setting;
+use Carbon\Carbon;
 
 
 
@@ -22,15 +23,18 @@ class HomeController extends Controller
         $web = Web::first();
         $student = Student::all();
         $setting = Setting::first();
+        $dt = Carbon::now()->format('Y-m-d');
 
         if ($req_search != null) {
-            $student = Student::query()->where('no_exam', 'LIKE', $req_search)->get();
+            $student = Student::query()->where('no_exam', $req_search)->get();
         }
+
         return view('frontend.index', [
             'web' => $web,
             'student' => $student,
             'setting' => $setting,
             'req_search' => $req_search,
+            'dt' => $dt,
         ]);
     }
 

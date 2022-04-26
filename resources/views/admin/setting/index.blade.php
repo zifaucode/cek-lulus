@@ -32,34 +32,31 @@ Profile
                     <h3 class="card-title text-center">DETAIL PENGUMUMAN</h3>
 
 
+
                 </div>
                 <div class="card-content collpase show">
                     <br>
 
 
                     <div class="card-body card-dashboard">
-
+                        <a :href="'/setting/edit/'+ setting.id" class="btn btn-social btn-min-width mr-1 mb-1 btn-secondary pull-right" class="float-sm-left">
+                            <span class="fa fa-pencil"></span> EDIT PENGUMUMAN &nbsp; </a>
+                        <br>
 
                         <table>
                             <tr>
-                                <td class="font-14"><b>NAME</b></td>
-                                <td class="font-14">&nbsp;: &nbsp; &nbsp; {{auth()->user()->name}}</td>
+                                <td class="font-14"><b>STATUS</b></td>
+                                <td v-if="setting.status == 1" class="font-14">&nbsp;: &nbsp; &nbsp; <span class="badge badge-success"> DIBUKA</span></td>
+                                <td v-if="setting.status == 2" class="font-14">&nbsp;: &nbsp; &nbsp; <span class="badge badge-danger"> DITUTUP</span></td>
                             </tr>
                             <!--end tr-->
                             <tr>
-                                <td class="font-14"><b>USERNAME</b></td>
-                                <td class="font-14">&nbsp;: &nbsp; &nbsp; {{auth()->user()->username}}</td>
+                                <td class="font-14"><b>DIMULAI PADA :</b></td>
+                                <td class="font-14">&nbsp;: &nbsp; &nbsp; @{{ setting.date }}</td>
                             </tr>
 
-                            <tr>
-                                <td class="font-14"><b>EMAIL</b></td>
-                                <td class="font-14">&nbsp;: &nbsp; &nbsp; {{auth()->user()->email}}</td>
-                            </tr>
 
-                            <tr>
-                                <td class="font-14"><b>PASSWORD</b></td>
-                                <td class="font-14">&nbsp;: &nbsp; &nbsp; {{auth()->user()->password_view}}</td>
-                            </tr>
+
 
 
                         </table>
@@ -87,11 +84,11 @@ Profile
     new Vue({
         el: '#app',
         data: {
-
+            setting: JSON.parse(String.raw `{!! json_encode($setting) !!}`),
         },
         methods: {
 
-
+           
         }
     })
 </script>

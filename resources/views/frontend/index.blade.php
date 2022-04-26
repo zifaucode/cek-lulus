@@ -16,6 +16,11 @@
 </style>
 @endsection
 
+<!-- @php
+use Carbon\Carbon;
+$dt = Carbon::now()->format('Y-m-d');
+@endphp -->
+
 @section('content')
 
 <div id="app" v-cloak>
@@ -54,11 +59,20 @@
 
 
     <br>
+    <div id="kick-start" class="card text-center bg-warning">
+        <div class="card-header">
+            <h4 class="card-title text-white" id="demo">@{{ currentDate() }}</h4>
+            <a class="heading-elements-toggle"><i class="fa fa-ellipsis-v font-medium-3"></i></a>
+
+        </div>
+    </div>
+    <br>
     @if($setting->status == 1)
-    <div class="col-xl-12">
+
+    <div class="col-xl-12" v-if="currentDate() <= 0">
         <div class="card box-shadow-0 border-info">
             <div class="card-header card-head-inverse bg-secondary">
-                <h3 class="card-title text-center">SILAHKAN CEK KELULUSAN ANDA</h3>
+                <h3 class="card-title text-center">SILAHKAN CEK KELULUSAN ANDA </h3>
 
 
 
@@ -126,6 +140,9 @@
             </div>
         </div>
     </div>
+
+
+
     @else
     <div id="kick-start" class="card text-center bg-warning">
         <div class="card-header">
@@ -153,6 +170,12 @@
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
 
+
+
+
+
+
+
 <script>
     new Vue({
         el: '#app',
@@ -161,6 +184,8 @@
             student: JSON.parse(String.raw `{!! json_encode($student) !!}`),
             setting: JSON.parse(String.raw `{!! json_encode($setting) !!}`),
             search: '{{ $req_search }}',
+            dt: '{!! $setting->date !!}',
+            dt2: '{{ $dt }}',
         },
         methods: {
             submitSearch: function() {
@@ -168,12 +193,49 @@
                 window.location.href = `/?search=${this.search}`
             },
 
+            currentDate() {
+                let datedb = new Date(this.dt);
 
+                let current = new Date(this.dt2);
 
+                let distance = datedb - current;
+                return distance;
+            }
         }
     })
 </script>
 
+
+<script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("{!! $setting->date !!} {!! $setting->time !!}").getTime();
+
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+
+        // Get today's date and time
+        var now = new Date().getTime();
+
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Output the result in an element with id="demo"
+        document.getElementById("demo").innerHTML = "<span class='badge badge-success'>HITUNG MUNDUR PENGUMUMAN DIBUKA</span> :  " + days + "Hari - " + hours + "Jam - " +
+            minutes + "Menit - " + seconds + "Detik ";
+
+        // If the count down is over, write some text 
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "<span v-model='buka' :value='buka' >PENGUMUMAN SUDAH DIBUKA</span>";
+        }
+    }, 1000);
+</script>
 
 
 @endsection
