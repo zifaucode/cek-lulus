@@ -23,7 +23,7 @@ class HomeController extends Controller
         $web = Web::first();
         $student = Student::all();
         $setting = Setting::first();
-        $dt = Carbon::now()->format('Y-m-d');
+        $dt = Carbon::now()->format('Y-m-d H:i:s');
 
         if ($req_search != null) {
             $student = Student::query()->where('no_exam', $req_search)->get();

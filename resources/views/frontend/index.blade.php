@@ -72,7 +72,7 @@ $dt = Carbon::now()->format('Y-m-d');
     <div class="col-xl-12" v-if="currentDate() <= 0">
         <div class="card box-shadow-0 border-info">
             <div class="card-header card-head-inverse bg-secondary">
-                <h3 class="card-title text-center">SILAHKAN CEK KELULUSAN ANDA </h3>
+                <h3 class="card-title text-center">SILAHKAN CEK KELULUSAN ANDA @{{ currentDate() }}</h3>
 
 
 
@@ -184,8 +184,9 @@ $dt = Carbon::now()->format('Y-m-d');
             student: JSON.parse(String.raw `{!! json_encode($student) !!}`),
             setting: JSON.parse(String.raw `{!! json_encode($setting) !!}`),
             search: '{{ $req_search }}',
-            dt: '{!! $setting->date !!}',
+            dt: '{!! $setting->date !!} {!! $setting->time !!}',
             dt2: '{{ $dt }}',
+
         },
         methods: {
             submitSearch: function() {
@@ -194,12 +195,19 @@ $dt = Carbon::now()->format('Y-m-d');
             },
 
             currentDate() {
-                let datedb = new Date(this.dt);
-
-                let current = new Date(this.dt2);
+                let datedb = new Date(this.dt).getTime();
+                let current = new Date().getTime();
 
                 let distance = datedb - current;
                 return distance;
+            },
+
+            currentTime() {
+                let timedb = this.time;
+                let timeok = this.time2;
+
+                let distanceTime = timedb - timeok;
+                return distanceTime;
             }
         }
     })
