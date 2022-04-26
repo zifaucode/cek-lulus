@@ -26,7 +26,7 @@ opsi selain migrate database :
 
 Dan Jalankan
 
--   Dan Jalankan : `php artisan optimize` DAN `php artisan serve`
+-   `php artisan optimize` dan `php artisan serve`
 
 ## DEMO WEBSITE
 
