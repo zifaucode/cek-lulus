@@ -30,7 +30,7 @@ Dan Jalankan
 
 ## DEMO WEBSITE
 
-SEGERA.
+`https://cek-lulus.fauziagustian.com/`
 
 ## TRAKTIR KOPI
 
