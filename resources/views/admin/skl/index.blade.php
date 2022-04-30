@@ -111,7 +111,7 @@ Setting SKL
 
 
                                         <div class="card-body card-dashboard">
-                                            <img src="/files/contoh/kop_surat.png" width="450px">
+                                            <img src="/files/contoh/kop_surat.png" width="250px">
 
 
                                         </div>
@@ -190,7 +190,7 @@ Setting SKL
 
 
                                         <div class="card-body card-dashboard">
-                                            <img src="/files/contoh/pembuka.png" width="450px">
+                                            <img src="/files/contoh/pembuka.png" width="250px">
 
 
                                         </div>
@@ -283,7 +283,7 @@ Setting SKL
 
 
                                         <div class="card-body card-dashboard">
-                                            <img src="/files/contoh/penutup.png" width="450px">
+                                            <img src="/files/contoh/penutup.png" width="250px">
 
 
                                         </div>

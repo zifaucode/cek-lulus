@@ -10,6 +10,7 @@ Web cek kelulusan dibuat dengan laravel, vuejs 2 cdn, Axios, dengan template STA
 
 -   Terdapat Fitur upload siswa Excel dengan format template yang sudah disediakan tanpa ribet harus input 1 per 1 siswa
 -   Terdapat juga Fitur Edit web seperti setting slide gambar , logo, nama web, title web
+-   Terdapat juga Fitur Cetak dan setting surat keterangan lulus (skl)
 
 ## CARA INSTALL
 
