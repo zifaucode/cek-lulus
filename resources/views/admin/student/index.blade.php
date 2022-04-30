@@ -30,9 +30,14 @@ Admin
                 </div>
                 <div class="card-content collpase show">
                     <br>
+                    <a href="" @click.prevent="deleteRecordAll()" class="btn btn-social btn-min-width mr-1 mb-1 btn-danger pull-right" class="float-sm-left">
+                        <span class="fa fa-trash"></span> Delete All &nbsp; </a>
+
                     <a href="/student/upload" class="btn btn-social btn-min-width mr-1 mb-1 btn-secondary pull-right" class="float-sm-left">
                         <span class="fa fa-plus"></span> Upload Siswa &nbsp; </a>
-                    <br>
+
+
+
                     <br>
                     <br>
 
@@ -49,6 +54,7 @@ Admin
                                     <th>No Ujian</th>
                                     <th>status </th>
                                     <th>Pesan</th>
+                                    <th>Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -73,6 +79,7 @@ Admin
                                     </td>
 
                                     <td>@{{ st.message }}</td>
+                                    <td><a class="btn btn-danger" href="" @click.prevent="deleteRecord(st.id)"><i class="fa fa-trash"></i></a></td>
 
                                 </tr>
 
@@ -101,6 +108,90 @@ Admin
             student: JSON.parse(String.raw `{!! json_encode($student) !!}`),
         },
         methods: {
+
+            deleteRecord: function(id) {
+                Swal.fire({
+                    title: 'Are you sure?',
+                    text: "The data will be deleted",
+                    icon: 'warning',
+                    reverseButtons: true,
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Delete',
+                    cancelButtonText: 'Cancel',
+                    showLoaderOnConfirm: true,
+                    preConfirm: () => {
+                        return axios.delete('/student/' + id)
+                            .then(function(response) {
+                                console.log(response.data);
+                            })
+                            .catch(function(error) {
+                                console.log(error.data);
+                                Swal.fire({
+                                    icon: 'error',
+                                    title: 'Oops',
+                                    text: 'Something wrong',
+                                })
+                            });
+                    },
+                    allowOutsideClick: () => !Swal.isLoading()
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Success',
+                            text: 'Data has been deleted',
+                        }).then((result) => {
+                            if (result.isConfirmed) {
+                                window.location.reload();
+                            }
+                        })
+                    }
+                })
+            },
+
+            deleteRecordAll: function() {
+                Swal.fire({
+                    title: 'Are you sure?',
+                    text: "The data will be deleted",
+                    icon: 'warning',
+                    reverseButtons: true,
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Delete',
+                    cancelButtonText: 'Cancel',
+                    showLoaderOnConfirm: true,
+                    preConfirm: () => {
+                        return axios.delete('/hapus_siswa')
+                            .then(function(response) {
+                                console.log(response.data);
+                            })
+                            .catch(function(error) {
+                                console.log(error.data);
+                                Swal.fire({
+                                    icon: 'error',
+                                    title: 'Oops',
+                                    text: 'Something wrong',
+                                })
+                            });
+                    },
+                    allowOutsideClick: () => !Swal.isLoading()
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Success',
+                            text: 'Data has been deleted',
+                        }).then((result) => {
+                            if (result.isConfirmed) {
+                                window.location.reload();
+                            }
+                        })
+                    }
+                })
+            },
 
 
         }

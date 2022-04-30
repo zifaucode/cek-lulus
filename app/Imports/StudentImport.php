@@ -24,10 +24,12 @@ class StudentImport implements ToModel, WithStartRow
         return new Student([
             'nisn' => $row[1],
             'name' => $row[2],
-            'no_exam' => $row[3],
-            'class' => $row[4],
-            'status' => $row[5],
-            'message' => $row[6],
+            'nama_ortu' => $row[3],
+            'tempat_tgl_lahir' => $row[4],
+            'no_exam' => $row[5],
+            'class' => $row[6],
+            'status' => $row[7],
+            'message' => $row[8],
         ]);
     }
 }

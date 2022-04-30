@@ -10,9 +10,9 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SettingController;
-
-
-
+use App\Http\Controllers\CetakController;
+use App\Http\Controllers\DeleteAllController;
+use App\Http\Controllers\SklController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,12 +39,16 @@ Route::get('/', [HomeController::class, 'index']);
 Route::get('/login', [AuthController::class, 'LoginForm'])->name('login');
 Route::post('login', [AuthController::class, 'authenticate'])->name('authenticate');
 
+Route::get('/cetak/{id}', [CetakController::class, 'index']);
+
 
 
 
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/dashboard', [AdminController::class, 'index'])->name('dashboard');
     Route::get('logout', [AuthController::class, 'logout'])->name('logout');
+
+    Route::delete('/hapus_siswa', [StudentController::class, 'destroy']);
 
     Route::prefix('/student')->group(function () {
         Route::get('/', [StudentController::class, 'index']);
@@ -68,6 +72,21 @@ Route::group(['middleware' => ['auth']], function () {
         Route::delete('/{id}', [WebController::class, 'destroy']);
     });
 
+    Route::prefix('/skl')->group(function () {
+        Route::get('/', [SklController::class, 'index']);
+        Route::get('/upload', [SklController::class, 'upload']);
+        Route::post('/', [SklController::class, 'store']);
+        Route::get('/edit_kop/{id}', [SklController::class, 'edit_kop']);
+        Route::get('/edit_pembuka/{id}', [SklController::class, 'edit_pembuka']);
+        Route::get('/edit_penutup/{id}', [SklController::class, 'edit_penutup']);
+        Route::post('/edit_kop2/{id}', [SklController::class, 'update_kop']);
+        Route::post('/edit_pembuka2/{id}', [SklController::class, 'update_pembuka']);
+        Route::post('/edit_penutup2/{id}', [SklController::class, 'update_penutup']);
+        Route::get('/detail/{id}', [SklController::class, 'detail']);
+        Route::patch('/{id}', [SklController::class, 'update']);
+        Route::delete('/{id}', [SklController::class, 'destroy']);
+    });
+
     Route::prefix('/profile')->group(function () {
         Route::get('/', [ProfileController::class, 'index']);
         Route::get('/upload', [ProfileController::class, 'upload']);
@@ -80,13 +99,13 @@ Route::group(['middleware' => ['auth']], function () {
     });
 
     Route::prefix('/setting')->group(function () {
-        Route::get('/', [SettingController::class, 'index']);
-        Route::get('/upload', [SettingController::class, 'upload']);
-        Route::post('/', [SettingController::class, 'store']);
-        Route::get('/edit/{id}', [SettingController::class, 'edit']);
-        Route::post('/edit2/{id}', [SettingController::class, 'update']);
-        Route::get('/detail/{id}', [SettingController::class, 'detail']);
-        Route::patch('/{id}', [SettingController::class, 'update']);
-        Route::delete('/{id}', [SettingController::class, 'destroy']);
+        Route::get('/', [SklController::class, 'index']);
+        Route::get('/upload', [SklController::class, 'upload']);
+        Route::post('/', [SklController::class, 'store']);
+        Route::get('/edit/{id}', [SklController::class, 'edit']);
+        Route::post('/edit2/{id}', [SklController::class, 'update']);
+        Route::get('/detail/{id}', [SklController::class, 'detail']);
+        Route::patch('/{id}', [SklController::class, 'update']);
+        Route::delete('/{id}', [SklController::class, 'destroy']);
     });
 });

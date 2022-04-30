@@ -12,6 +12,8 @@
 
             <li class=" nav-item"><a href="/setting"><i class="ft-airplay"></i><span class="menu-title" data-i18n="">Pengumuman</span></a>
             </li>
+            <li class=" nav-item"><a href="/skl"><i class="ft-file-text"></i><span class="menu-title" data-i18n="">Cetak SKL</span></a>
+            </li>
             <li class=" nav-item"><a href="/web"><i class="ft-layers"></i><span class="menu-title" data-i18n="">Manage Web</span></a>
             </li>
 
