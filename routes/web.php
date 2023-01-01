@@ -99,13 +99,13 @@ Route::group(['middleware' => ['auth']], function () {
     });
 
     Route::prefix('/setting')->group(function () {
-        Route::get('/', [SklController::class, 'index']);
-        Route::get('/upload', [SklController::class, 'upload']);
-        Route::post('/', [SklController::class, 'store']);
-        Route::get('/edit/{id}', [SklController::class, 'edit']);
-        Route::post('/edit2/{id}', [SklController::class, 'update']);
-        Route::get('/detail/{id}', [SklController::class, 'detail']);
-        Route::patch('/{id}', [SklController::class, 'update']);
-        Route::delete('/{id}', [SklController::class, 'destroy']);
+        Route::get('/', [SettingController::class, 'index']);
+        Route::get('/upload', [SettingController::class, 'upload']);
+        Route::post('/', [SettingController::class, 'store']);
+        Route::get('/edit/{id}', [SettingController::class, 'edit']);
+        Route::post('/edit2/{id}', [SettingController::class, 'update']);
+        Route::get('/detail/{id}', [SettingController::class, 'detail']);
+        Route::patch('/{id}', [SettingController::class, 'update']);
+        Route::delete('/{id}', [SettingController::class, 'destroy']);
     });
 });

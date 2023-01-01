@@ -1,7 +1,7 @@
 @extends('layouts.admin.app')
 
 @section('title')
-Profile
+Pengumuman
 @endsection
 
 
@@ -88,7 +88,7 @@ Profile
         },
         methods: {
 
-           
+
         }
     })
 </script>

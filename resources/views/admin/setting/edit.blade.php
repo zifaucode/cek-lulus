@@ -1,7 +1,7 @@
 @extends('layouts.admin.app')
 
 @section('title')
-Profile
+Edit Pengumuman
 @endsection
 
 
