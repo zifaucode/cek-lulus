@@ -33,9 +33,13 @@ Dan Jalankan
 
 `https://cek-lulus.fauziagustian.com/`
 
+## NOTED
+
+-   Seeder belum ada
+
 ## TRAKTIR KOPI
 
-Traktir saya kopi agar melek terus saat ngoding : <a href="https://trakteer.id/zifau"><img src="https://img.shields.io/static/v1?label=Trakteer&message=zifaucode&color=C02433"></a>
+Traktir kopi agar melek terus saat ngoding : <a href="https://trakteer.id/zifau"><img src="https://img.shields.io/static/v1?label=Trakteer&message=zifaucode&color=C02433"></a>
 
 ## License
 
