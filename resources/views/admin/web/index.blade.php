@@ -96,7 +96,7 @@ Data Web
         </div>
     </div>
 
-    <div class="row">
+    <!-- <div class="row">
         <div class="col-4">
 
             <br>
@@ -161,7 +161,7 @@ Data Web
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 </div>
 
 @endsection
@@ -187,3 +187,4 @@ Data Web
 
 
 @endsection
+

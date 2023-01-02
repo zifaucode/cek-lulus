@@ -21,42 +21,39 @@ $web = Web::first();
     <link rel="shortcut icon" type="image/x-icon" href="/files/logo/{{ $web->logo }}">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i%7COpen+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
     <!-- BEGIN VENDOR CSS-->
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/vendors.css">
+
     <!-- END VENDOR CSS-->
     <!-- BEGIN STACK CSS-->
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/app.css">
-    <link rel="stylesheet" type="text/css" href="../../../assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/app.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
     <!-- END STACK CSS-->
     <!-- BEGIN Page Level CSS-->
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/core/menu/menu-types/vertical-menu.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/core/menu/menu-types/vertical-menu.css') }}">
     <!-- END Page Level CSS-->
-    <!-- BEGIN Custom CSS-->
-    <link rel="stylesheet" type="text/css" href="../../../assets/css/style.css">
+
 
 
     <!-- BEGIN VENDOR CSS-->
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/vendors.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/extensions/unslider.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/weather-icons/climacons.min.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/fonts/meteocons/style.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/charts/morris.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/app.css">
-    <link rel="stylesheet" type="text/css" href="../../../assets/css/style.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/core/menu/menu-types/horizontal-menu.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/core/colors/palette-gradient.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/fonts/simple-line-icons/style.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/core/colors/palette-gradient.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/pages/timeline.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/core/colors/palette-gradient.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/core/colors/palette-callout.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/vendors.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/vendors/css/extensions/unslider.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/vendors/css/weather-icons/climacons.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/fonts/meteocons/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/vendors/css/charts/morris.css') }}">
+
+
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/core/menu/menu-types/horizontal-menu.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/core/colors/palette-gradient.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/fonts/simple-line-icons/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/pages/timeline.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/core/colors/palette-callout.css') }}">
 
     <!-- ======================================  DATA TABLE =======================================-->
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/tables/datatable/datatables.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/vendors/css/tables/datatable/datatables.min.css') }}">
     <!-- ======================================  DATA TABLE =======================================-->
 
     <!-- ======================================  SELECT 2 =======================================-->
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/forms/selects/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/vendors/css/forms/selects/select2.min.css') }}">
 
     <!-- ======================================  SELECT 2 =======================================-->
 
@@ -86,7 +83,7 @@ $web = Web::first();
 @include('layouts.admin.sidebar')
 
 
-<!-- 
+<!--
 <div class="app-content content">
     <div class="content-wrapper">
 
@@ -126,22 +123,22 @@ $web = Web::first();
 
 <!-- //////////////////////////////////////////////////////////////////////////////////////-->
 
-<script src="../../../app-assets/js/core/libraries/jquery.min.js" type="text/javascript"></script>
-<script src="../../../app-assets/vendors/js/ui/popper.min.js" type="text/javascript"></script>
-<script src="../../../app-assets/js/core/libraries/bootstrap.min.js" type="text/javascript"></script>
-<script src="../../../app-assets/vendors/js/ui/perfect-scrollbar.jquery.min.js" type="text/javascript"></script>
-<script src="../../../app-assets/vendors/js/ui/unison.min.js" type="text/javascript"></script>
-<script src="../../../app-assets/vendors/js/ui/blockUI.min.js" type="text/javascript"></script>
-<script src="../../../app-assets/vendors/js/ui/jquery-sliding-menu.js" type="text/javascript"></script>
-<script src="../../../app-assets/js/core/app-menu.js" type="text/javascript"></script>
-<script src="../../../app-assets/js/core/app.js" type="text/javascript"></script>
+<script src="{{ asset('app-assets/js/core/libraries/jquery.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('app-assets/vendors/js/ui/popper.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('app-assets/js/core/libraries/bootstrap.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('app-assets/vendors/js/ui/perfect-scrollbar.jquery.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('app-assets/vendors/js/ui/unison.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('app-assets/vendors/js/ui/blockUI.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('app-assets/vendors/js/ui/jquery-sliding-menu.js') }}" type="text/javascript"></script>
+<script src="{{ asset('app-assets/js/core/app-menu.js') }}" type="text/javascript"></script>
+<script src="{{ asset('app-assets/js/core/app.js') }}" type="text/javascript"></script>
 
 <!-- //////////////////////////////////////////////////////////////////////////////////////-->
 
 
 <!-- ======================================  SELECT 2 =======================================-->
-<script src="../../../app-assets/vendors/js/forms/select/select2.full.min.js" type="text/javascript"></script>
-<script src="../../../app-assets/js/scripts/forms/select/form-select2.js" type="text/javascript"></script>
+<script src="{{ asset('app-assets/vendors/js/forms/select/select2.full.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('app-assets/js/scripts/forms/select/form-select2.js') }}" type="text/javascript"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/js/select2.min.js"></script>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/css/select2.min.css" rel="stylesheet" />
@@ -161,18 +158,6 @@ $web = Web::first();
 <!-- ======================================  DATA TABLE =======================================-->
 
 
-
-
-
-<!-- ==============================================  CHART =====================================================-->
-<script src="../../../app-assets/js/scripts/charts/chartjs/bar/bar.js" type="text/javascript"></script>
-<script src="../../../app-assets/js/scripts/charts/chartjs/bar/bar-stacked.js" type="text/javascript"></script>
-<script src="../../../app-assets/js/scripts/charts/chartjs/bar/bar-multi-axis.js" type="text/javascript"></script>
-<script src="../../../app-assets/js/scripts/charts/chartjs/bar/column.js" type="text/javascript"></script>
-<script src="../../../app-assets/js/scripts/charts/chartjs/bar/column-stacked.js" type="text/javascript"></script>
-<script src="../../../app-assets/js/scripts/charts/chartjs/bar/column-multi-axis.js" type="text/javascript"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
-<!-- ==============================================  CHART =====================================================-->
 
 
 <script>

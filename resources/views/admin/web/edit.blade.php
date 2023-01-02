@@ -101,8 +101,7 @@ Admin
                 </div>
             </div>
         </div>
-
-        <div class="row">
+<!-- <div class="row">
             <div class="col-4">
 
                 <br>
@@ -184,7 +183,7 @@ Admin
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <div class="bs-callout-primary callout-border-left mt-1 p-1">
             <strong>Edit Data ?</strong>
             <p>Silahkan Klik Save Untuk Menyimpan : &nbsp; &nbsp;
