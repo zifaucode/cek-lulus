@@ -29,9 +29,10 @@ Dan Jalankan
 
 -   `php artisan optimize` dan `php artisan serve`
 
-## DEMO WEBSITE
+## USER PASSWORD
 
-`https://cek-lulus.fauziagustian.com/`
+-    U: admin
+-    P: 123456789
 
 ## NOTED
 
