@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 30, 2022 at 11:17 AM
+-- Generation Time: Jan 02, 2023 at 01:20 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 7.4.25
 
@@ -153,7 +153,7 @@ CREATE TABLE `settings` (
 --
 
 INSERT INTO `settings` (`id`, `status`, `date`, `time`, `created_at`, `updated_at`) VALUES
-(1, 1, '2022-04-26', '23:19:00', NULL, '2022-04-26 09:17:07');
+(1, 1, '2023-01-02', '19:00:00', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -233,7 +233,7 @@ CREATE TABLE `webs` (
 --
 
 INSERT INTO `webs` (`id`, `title`, `logo`, `web_name`, `slide_1`, `slide_2`, `slide_3`, `footer`, `about`, `created_at`, `updated_at`) VALUES
-(1, 'Web Kelulusan 2', 'Sman 1 Parung_smansapar.png', 'Sman 1 Parung', 'Web Kelulusan 2_Metaliq2-Evolving_Metal_Texture_Motion_Background_Video_Loop_Sample2.jpg', 'Web Kelulusan 2_fikri-rasyid-FnKKF2bATEE-unsplash.jpg', 'Web Kelulusan 2_istockphoto-1146679365-612x612.jpg', 'Sman 1 parung', 'Web ini Merupakan web pengumuman kelulusan', NULL, '2022-04-23 21:18:33');
+(1, 'Web Kelulusan V2', 'Sman 1 Parung_school.png', 'Nama Sekolah', 'Web Kelulusan 2_Metaliq2-Evolving_Metal_Texture_Motion_Background_Video_Loop_Sample2.jpg', 'Web Kelulusan 2_fikri-rasyid-FnKKF2bATEE-unsplash.jpg', 'Web Kelulusan 2_istockphoto-1146679365-612x612.jpg', 'Sman 1 parung', 'Web ini Merupakan web pengumuman kelulusan', NULL, '2023-01-01 10:18:36');
 
 --
 -- Indexes for dumped tables
