@@ -4,6 +4,20 @@
 <a href="https://trakteer.id/zifau"><img src="https://img.shields.io/static/v1?label=Trakteer&message=zifaucode&color=C02433"></a>
 </p>
 
+<b>Fork dan Star ⭐ jika ini membantu ♥️</b>
+
+# Index
+- **[Tentang CEK-LULUS](#tentang-cek-lulus)**
+- **[Languages](#languages)**
+- **[Frameworks](#frameworks)**
+- **[Code Editors](#code-editors)**
+- **[OSes](#os)**
+- **[Hosting Services](#hosting-services)**
+- **[Contact Badges](#contact-badges)**
+- **[Blog Badges](#blog-badges)**
+- **[Donation Badges](#donation-badges)**
+
+
 ## Tentang CEK-LULUS
 
 Web cek kelulusan dibuat dengan laravel, vuejs 2 cdn, Axios, dengan template STACK ADMIN 3.
