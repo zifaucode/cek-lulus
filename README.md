@@ -32,7 +32,6 @@ Web cek kelulusan dibuat dengan laravel, vuejs 2 cdn, Axios, dengan template STA
 <br>
 <br>
 <br>
-<br>
 
 ## CARA INSTALL
 
@@ -55,18 +54,12 @@ Dan Jalankan
 <br>
 <br>
 <br>
-<br>
 
 ## USER PASSWORD
 
 -    U: admin
 -    P: 123456789
 
-<br>
-<br>
-<br>
-<br>
-<br>
 <br>
 <br>
 <br>
