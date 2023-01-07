@@ -14,14 +14,11 @@
 - **[NOTED](#noted)**
 - **[TRAKTIR KOPI](#traktir-kopi)**
 
-
-
-
-
-
-
-
-
+<br>
+<br>
+<br>
+<br>
+<br>
 
 
 
