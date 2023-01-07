@@ -30,6 +30,11 @@ Web cek kelulusan dibuat dengan laravel, vuejs 2 cdn, Axios, dengan template STA
 -   Terdapat juga Fitur Edit web seperti setting slide gambar , logo, nama web, title web
 -   Terdapat juga Fitur Cetak dan setting surat keterangan lulus (skl)
 
+<br>
+<br>
+<br>
+<br>
+<br>
 ## CARA INSTALL
 
 Untuk Menginstall Secara Lokal Pastikan PHP anda diatas > 7.3
@@ -47,18 +52,45 @@ Dan Jalankan
 
 -   `php artisan optimize:clear` dan `php artisan serve`
 
+<br>
+<br>
+<br>
+<br>
+<br>
+
 ## USER PASSWORD
 
 -    U: admin
 -    P: 123456789
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 ## NOTED
 
 -   Seeder belum ada
 
+<br>
+<br>
+<br>
+<br>
+<br>
 ## TRAKTIR KOPI
 
 Traktir kopi agar melek terus saat ngoding : <a href="https://trakteer.id/zifau"><img src="https://img.shields.io/static/v1?label=Trakteer&message=zifaucode&color=C02433"></a>
+
+<br>
+<br>
+<br>
+<br>
+<br>
 
 ## License
 
