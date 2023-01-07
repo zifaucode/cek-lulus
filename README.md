@@ -6,16 +6,14 @@
 
 <b>Fork dan Star ⭐ jika ini membantu ♥️</b>
 
+
 # Index
 - **[Tentang CEK-LULUS](#tentang-cek-lulus)**
-- **[Languages](#languages)**
-- **[Frameworks](#frameworks)**
-- **[Code Editors](#code-editors)**
-- **[OSes](#os)**
-- **[Hosting Services](#hosting-services)**
-- **[Contact Badges](#contact-badges)**
-- **[Blog Badges](#blog-badges)**
-- **[Donation Badges](#donation-badges)**
+- **[CARA INSTALL](#cara-install)**
+- **[USER PASSWORD](#user-password)**
+- **[NOTED](#noted)**
+- **[TRAKTIR KOPI](#traktir-kopi)**
+
 
 
 ## Tentang CEK-LULUS
