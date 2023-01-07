@@ -20,8 +20,6 @@
 <br>
 <br>
 
-
-
 ## Tentang CEK-LULUS
 
 Web cek kelulusan dibuat dengan laravel, vuejs 2 cdn, Axios, dengan template STACK ADMIN 3.
@@ -35,6 +33,7 @@ Web cek kelulusan dibuat dengan laravel, vuejs 2 cdn, Axios, dengan template STA
 <br>
 <br>
 <br>
+
 ## CARA INSTALL
 
 Untuk Menginstall Secara Lokal Pastikan PHP anda diatas > 7.3
@@ -73,6 +72,7 @@ Dan Jalankan
 <br>
 <br>
 <br>
+
 ## NOTED
 
 -   Seeder belum ada
@@ -82,6 +82,7 @@ Dan Jalankan
 <br>
 <br>
 <br>
+
 ## TRAKTIR KOPI
 
 Traktir kopi agar melek terus saat ngoding : <a href="https://trakteer.id/zifau"><img src="https://img.shields.io/static/v1?label=Trakteer&message=zifaucode&color=C02433"></a>
