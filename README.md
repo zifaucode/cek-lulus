@@ -27,7 +27,7 @@ opsi selain migrate database :
 
 Dan Jalankan
 
--   `php artisan optimize` dan `php artisan serve`
+-   `php artisan optimize:clear` dan `php artisan serve`
 
 ## USER PASSWORD
 
