@@ -57,7 +57,7 @@ Dan Jalankan
 
 ## NOTED
 
--   Seeder belum ada
+-   Segera Update Fitur Seeder
 
 <br>
 <br>
