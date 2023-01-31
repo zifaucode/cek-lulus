@@ -16,7 +16,6 @@
 
 <br>
 <br>
-<br>
 
 ## Tentang CEK-LULUS
 
