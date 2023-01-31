@@ -6,7 +6,6 @@
 
 <b>Fork dan Star ⭐ jika ini membantu ♥️</b>
 
-
 # Index
 - **[Tentang CEK-LULUS](#tentang-cek-lulus)**
 - **[CARA INSTALL](#cara-install)**
