@@ -34,18 +34,21 @@ Untuk Menginstall Secara Lokal Pastikan PHP anda diatas > 7.3
 -   Clone Repository ini Diterminal kesayangan anda `git clone https://github.com/zifaucode/cek-lulus.git`
 -   Ketikan `composer install`
 -   Rename .env-lokal menjadi .env dan edit sesuai konfigurasi database anda
--   migrate databasenya : `php artisan migrate`
+-   Buat database pada dbms anda (ex: phpmyadmin) dengan nama sesuai konfigurasi DB_DATABASE pada .env
+-   Migrate databasenya : `php artisan migrate`
+-   Jalankan Seeder database : `php artisan db:seed`
 
-opsi selain migrate database :
-
--   File SQL terletak pada foldel DBNYA-INI , import ke dalam mysql anda
-
-Dan Jalankan
+Jalankan Diterminal
 
 -   `php artisan optimize:clear` dan `php artisan serve`
 
 <br>
 <br>
+
+opsi selain jika tidak ingin menjalankan migrate database dan seeder:
+
+-   File SQL terletak pada foldel DBNYA-INI , import ke dalam db mysql yang sudah anda buat pada dbms anda
+
 
 ## USER PASSWORD
 
@@ -55,9 +58,11 @@ Dan Jalankan
 <br>
 <br>
 
-## NOTED
+## UPDATE
 
--   Segera Update Fitur Seeder
+-   Seeder User, Web, Setting
+-   Tampilan Frontend
+-   Bug Fix Cek no ujian
 
 <br>
 <br>
