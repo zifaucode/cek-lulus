@@ -21,21 +21,36 @@ class HomeController extends Controller
     {
         $req_search = $request->query('search');
         $web = Web::first();
-        $student = Student::all();
         $setting = Setting::first();
         $dt = Carbon::now()->format('Y-m-d H:i:s');
 
-        if ($req_search != null) {
-            $student = Student::query()->where('no_exam', $req_search)->get();
-        }
+        $student = Student::query()->where('no_exam', $req_search)->get();
+        $studentCheck =  $student->count();
 
-        return view('frontend.index', [
-            'web' => $web,
-            'student' => $student,
-            'setting' => $setting,
-            'req_search' => $req_search,
-            'dt' => $dt,
-        ]);
+        if (isset($req_search)) {
+
+            if ($studentCheck > 0) {
+                return view('frontend.index', [
+                    'web' => $web,
+                    'student' => $student,
+                    'setting' => $setting,
+                    'req_search' => $req_search,
+                    'dt' => $dt,
+                ]);
+            } else {
+                return view('frontend.not-found', [
+                    'web' => $web,
+                ]);
+            }
+        } else {
+            return view('frontend.null', [
+                'web' => $web,
+                'setting' => $setting,
+                'req_search' => $req_search,
+                'dt' => $dt,
+
+            ]);
+        }
     }
 
     /**

@@ -74,15 +74,32 @@
 
                         <br>
                         @if($setting->status == 1)
-                        <h3 class="text-white mb-15">SILAHKAN CEK KELULUSAN ANDA index</h3>
+                        <h3 class="text-white mb-15">SILAHKAN CEK KELULUSAN ANDA</h3>
                         <div class="col-xl-12" v-if="currentDate() <= 0">
                             <div class="card box-shadow-0 border-info">
+                                <div class="card-header card-head-inverse bg-dark">
 
+
+                                </div>
                                 <div class="card-content collpase show">
                                     <br>
 
                                     <div class="card-body card-dashboard text-center">
 
+
+                                        <p class="text-dark">MASUKAN NO UJIAN DAN KLIK TOMBOL CEK</p>
+
+                                        <br>
+                                        <form @submit.prevent="submitSearch">
+
+                                            <div class="form-group text-center">
+                                                <input type="text" v-model="search" class="form-control" id="maxlength-position-inside" placeholder="NO .UJIAN" maxlength="17" />
+                                            </div>
+                                            <br>
+                                            <button type="submit" class="btn btn-success">CEK</button>
+                                        </form>
+                                        <br>
+                                        <br>
                                         @if(isset($req_search))
                                         <div v-for="st in student" v-if="search == st.no_exam ">
                                             <div class="alert alert-success" role="alert" v-if="st.status == 1">
@@ -103,11 +120,6 @@
                                                             </svg>
                                                             CETAK SKL</button></a>
                                                 </div>
-                                            </div>
-                                            <br>
-                                            <br>
-                                            <div>
-                                                <a href="/" class="btn btn-primary">Kembali</a>
                                             </div>
                                             <div class="alert alert-danger" role="alert" v-if="st.status == 2">
 

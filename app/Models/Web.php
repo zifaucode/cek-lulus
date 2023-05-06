@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Web extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'title',
+        'logo',
+        'web_name',
+        'footer',
+        'about',
+    ];
 }

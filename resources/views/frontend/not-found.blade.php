@@ -58,24 +58,14 @@
                     <div class="d-flex flex-column flex-center w-100 min-h-350px min-h-lg-500px px-9">
                         <!--begin::Alert-->
                         <div class="tex-center mb-6">
-                            <img alt="Logo" src="/files/logo/graduates.png" width="180px">
+                            <img alt="Logo" src="/files/logo/sad.png" width="180px">
                         </div>
 
-                        <div class="alert alert-dismissible bg-light-warning border border-primary d-flex flex-column flex-sm-row p-5 mb-10">
 
-                            <div class="d-flex flex-column pe-0 pe-sm-10">
-                                <!--begin::Title-->
-                                <h4 class="card-title text-dark" id="demo"></h4>
-                                <!--end::Content-->
-                            </div>
-
-                        </div>
-                        <!--end::Alert-->
 
                         <br>
-                        @if($setting->status == 1)
-                        <h3 class="text-white mb-15">SILAHKAN CEK KELULUSAN ANDA index</h3>
-                        <div class="col-xl-12" v-if="currentDate() <= 0">
+
+                        <div class="col-xl-12">
                             <div class="card box-shadow-0 border-info">
 
                                 <div class="card-content collpase show">
@@ -83,78 +73,30 @@
 
                                     <div class="card-body card-dashboard text-center">
 
-                                        @if(isset($req_search))
-                                        <div v-for="st in student" v-if="search == st.no_exam ">
-                                            <div class="alert alert-success" role="alert" v-if="st.status == 1">
-                                                <strong>Selamat! @{{ st.name }}</strong>
-                                                <p>@{{ st.message }}</p>
-                                                <br>
-                                                <div class="text-start">
-                                                    <h5 class="text-dark"><b>NAMA</b>&nbsp; &nbsp; &nbsp; &nbsp; : @{{ st.name }}</h5>
-                                                    <br>
-                                                    <h5 class="text-dark"><b>KELAS</b>&nbsp; &nbsp; &nbsp; &nbsp; : @{{ st.class }}</h5>
-                                                    <br>
-                                                    <h5 class="text-dark"><b>STATUS</b>&nbsp; &nbsp; &nbsp; : <span class="badge badge-success"> LULUS</span></h5>
-                                                </div>
-                                                <div class="text-center">
-                                                    <a :href="'/cetak/'+ st.id"><button class="btn btn-sm btn-primary">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-check-fill" viewBox="0 0 16 16">
-                                                                <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0zM9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1zm1.354 4.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708.708z" />
-                                                            </svg>
-                                                            CETAK SKL</button></a>
-                                                </div>
-                                            </div>
-                                            <br>
-                                            <br>
-                                            <div>
-                                                <a href="/" class="btn btn-primary">Kembali</a>
-                                            </div>
-                                            <div class="alert alert-danger" role="alert" v-if="st.status == 2">
-
-                                                <strong>Mohon Maaf @{{ st.name }}</strong>
-                                                <p>@{{ st.message }}</p>
-                                                <br>
-                                                <div class="text-start">
-                                                    <h5 class="text-dark"><b>NAMA</b>&nbsp; &nbsp; &nbsp; &nbsp; : @{{ st.name }}</h5>
-                                                    <br>
-                                                    <h5 class="text-dark"><b>KELAS</b>&nbsp; &nbsp; &nbsp; &nbsp; : @{{ st.class }}</h5>
-                                                    <br>
-                                                    <h5 class="text-dark"><b>STATUS</b>&nbsp; &nbsp; &nbsp; : <span class="badge badge-danger"> DITUNDA</span></h5>
-                                                </div>
-                                            </div>
-
-
-
-                                        </div>
-
-                                        <div v-for="st in student" v-if="search != st.no_exam">
-                                            <div class="alert alert-danger" role="alert">
+                                        <div>
+                                            <div class="alert alert-danger mb-4" role="alert">
 
                                                 <strong>NO UJIAN TIDAK DITEMUKAN</strong>
 
 
                                             </div>
+
+
+                                        </div>
+                                        <br>
+                                        <br>
+                                        <div class="text-center mb-4">
+                                            <a href="/" class="btn btn-primary">Kembali</a>
                                         </div>
 
-                                        @else
 
-                                        @endif
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    @else
-                    <div id="kick-start" class="card text-center bg-warning">
-                        <div class="card-header">
 
 
-                            <h4 class="card-title text-white">PENGUMUMAN KELULUSAN BELUM DI BUKA</h4>
-                            <a class="heading-elements-toggle"></a>
-
-                        </div>
-                    </div>
-                    @endif
                 </div>
             </div>
 
@@ -226,66 +168,9 @@
         el: '#app',
         data: {
             web: JSON.parse(String.raw `{!! json_encode($web) !!}`),
-            student: JSON.parse(String.raw `{!! json_encode($student) !!}`),
-            setting: JSON.parse(String.raw `{!! json_encode($setting) !!}`),
-            search: '{{ $req_search }}',
-            dt: '{!! $setting->date !!} {!! $setting->time !!}',
-            dt2: '{{ $dt }}',
-
         },
         methods: {
-            submitSearch: function() {
-                // console.log(this.sort_by)
-                window.location.href = `/?search=${this.search}`
-            },
-
-            currentDate() {
-                let datedb = new Date(this.dt).getTime();
-                let current = new Date().getTime();
-
-                let distance = datedb - current;
-                return distance;
-            },
-
-            currentTime() {
-                let timedb = this.time;
-                let timeok = this.time2;
-
-                let distanceTime = timedb - timeok;
-                return distanceTime;
-            }
+            //
         }
     })
-</script>
-
-
-<script>
-    // Set the date we're counting down to
-    var countDownDate = new Date("{!! $setting->date !!} {!! $setting->time !!}").getTime();
-
-    // Update the count down every 1 second
-    var x = setInterval(function() {
-
-        // Get today's date and time
-        var now = new Date().getTime();
-
-        // Find the distance between now and the count down date
-        var distance = countDownDate - now;
-
-        // Time calculations for days, hours, minutes and seconds
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        // Output the result in an element with id="demo"
-        document.getElementById("demo").innerHTML = "<span class='badge badge-success'>HITUNG MUNDUR PENGUMUMAN</span> :  " + days + "Hari - " + hours + "Jam - " +
-            minutes + "Menit - " + seconds + "Detik ";
-
-        // If the count down is over, write some text
-        if (distance < 0) {
-            clearInterval(x);
-            document.getElementById("demo").innerHTML = "PENGUMUMAN SUDAH DIBUKA";
-        }
-    }, 1000);
 </script>
