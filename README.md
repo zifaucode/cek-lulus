@@ -18,7 +18,7 @@
 
 ## Tentang CEK-LULUS
 
-Merupakan web untuk mengetahui kelulusan Siswa/i (SD/SMP/SMA) dengan cara memasukan NISN atau NO.UJIAN. Website ini dibuat dengan laravel 8, vuejs 2 cdn, Axios cdn, dengan template STACK ADMIN 3 (Dashboard admin). CEK-LULUS memiliki fitur sebagai berikut:
+Merupakan web untuk mengetahui kelulusan Siswa/i (SD/SMP/SMA) dengan cara memasukan NISN atau NO.UJIAN. Website ini dibuat dengan laravel 10, vuejs 2 cdn, Axios cdn, dengan template STACK ADMIN 3 (Dashboard admin). CEK-LULUS memiliki fitur sebagai berikut:
 
 -   Terdapat Fitur upload siswa Excel dengan format template yang sudah disediakan tanpa ribet harus input 1 per 1 siswa
 -   Terdapat juga Fitur Edit web seperti setting logo, nama web, title web, deskripsi web, dan footer
