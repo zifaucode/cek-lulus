@@ -34,7 +34,10 @@ Admin
                         <span class="fa fa-trash"></span> Delete All &nbsp; </a>
 
                     <a href="/student/upload" class="btn btn-social btn-min-width mr-1 mb-1 btn-secondary pull-right" class="float-sm-left">
-                        <span class="fa fa-plus"></span> Upload Siswa &nbsp; </a>
+                        <span class="fa fa-upload"></span> Upload Excel &nbsp; </a>
+
+                    <a href="/student/create" class="btn btn-social btn-min-width mr-1 mb-1 btn-success pull-right" class="float-sm-left">
+                        <span class="fa fa-plus"></span> Tambah Siswa &nbsp; </a>
 
 
 
@@ -79,7 +82,10 @@ Admin
                                     </td>
 
                                     <td>@{{ st.message }}</td>
-                                    <td><a class="btn btn-danger" href="" @click.prevent="deleteRecord(st.id)"><i class="fa fa-trash"></i></a></td>
+                                    <td>
+                                        <a :href="'/student/edit/' + st.id" class="btn btn-warning mb-1"><i class="fa fa-edit"></i></a>
+                                        <a class="btn btn-danger mb-1" href="" @click.prevent="deleteRecord(st.id)"><i class="fa fa-trash"></i></a>
+                                    </td>
 
                                 </tr>
 

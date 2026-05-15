@@ -48,7 +48,7 @@ class StudentController extends Controller
 
     public function create()
     {
-        //
+        return view('admin.student.create');
     }
 
     /**
@@ -59,7 +59,29 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'class' => 'required|string|max:255',
+            'nisn' => 'required|string|max:255',
+            'no_exam' => 'required|string|max:255',
+            'status' => 'required|integer',
+            'message' => 'nullable|string',
+            'nama_ortu' => 'nullable|string|max:255',
+            'tempat_tgl_lahir' => 'nullable|string|max:255',
+        ]);
+
+        Student::create([
+            'name' => $request->name,
+            'class' => $request->class,
+            'nisn' => $request->nisn,
+            'no_exam' => $request->no_exam,
+            'status' => $request->status,
+            'message' => $request->message ?? '',
+            'nama_ortu' => $request->nama_ortu ?? '',
+            'tempat_tgl_lahir' => $request->tempat_tgl_lahir ?? '',
+        ]);
+
+        return redirect('/student')->with('success', 'Data siswa berhasil ditambahkan');
     }
 
     /**
@@ -106,7 +128,8 @@ class StudentController extends Controller
      */
     public function edit($id)
     {
-        //
+        $student = Student::find($id);
+        return view('admin.student.edit', compact('student'));
     }
 
     /**
@@ -118,7 +141,30 @@ class StudentController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'class' => 'required|string|max:255',
+            'nisn' => 'required|string|max:255',
+            'no_exam' => 'required|string|max:255',
+            'status' => 'required|integer',
+            'message' => 'nullable|string',
+            'nama_ortu' => 'nullable|string|max:255',
+            'tempat_tgl_lahir' => 'nullable|string|max:255',
+        ]);
+
+        $student = Student::find($id);
+        $student->update([
+            'name' => $request->name,
+            'class' => $request->class,
+            'nisn' => $request->nisn,
+            'no_exam' => $request->no_exam,
+            'status' => $request->status,
+            'message' => $request->message ?? '',
+            'nama_ortu' => $request->nama_ortu ?? '',
+            'tempat_tgl_lahir' => $request->tempat_tgl_lahir ?? '',
+        ]);
+
+        return redirect('/student')->with('success', 'Data siswa berhasil diupdate');
     }
 
     /**

@@ -53,6 +53,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::prefix('/student')->group(function () {
         Route::get('/', [StudentController::class, 'index']);
         Route::get('/upload', [StudentController::class, 'upload']);
+        Route::get('/create', [StudentController::class, 'create']);
         Route::post('/', [StudentController::class, 'store']);
         Route::post('/import_excel', [StudentController::class, 'import_excel']);
         Route::get('/edit/{id}', [StudentController::class, 'edit']);
